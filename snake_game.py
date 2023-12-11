@@ -5,7 +5,6 @@ from collections import namedtuple
 
 pygame.init()
 font = pygame.font.Font('arial.ttf', 25)
-#font = pygame.font.SysFont('arial', 25)
 
 class Direction(Enum):
     RIGHT = 1
@@ -24,6 +23,25 @@ BLACK = (0,0,0)
 
 BLOCK_SIZE = 20
 SPEED = 20
+
+#TODO: 
+#Each epoch has current state that includes 12 different state and action that output of the states 
+#Then apply the action and get the new state
+#12 input, a hidden layer and a output layer with 3 different states straight left right
+#action -> direction
+#States 
+# danger_straight,
+# danger_right,
+# danger_left,
+# direction_left,
+# direction_right,
+# direction_up,
+# direction_down,
+# food_left,
+# food_right,
+# food_up,
+# food_down,
+# snake_body  
 
 class SnakeGame:
     
